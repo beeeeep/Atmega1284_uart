@@ -10,9 +10,9 @@
 void uart_Init(void);
 void uart_putChar(char c);
 char uart_getChar(void);
+uint8_t uart_available(void);
 
 static FILE Serial_print = FDEV_SETUP_STREAM(Serial_put_char, NULL, _FDEV_SETUP_WRITE);
-
 static FILE Serial_read = FDEV_SETUP_STREAM(NULL, Serial_get_char, _FDEV_SETUP_READ);
 
 #endif UART_H
